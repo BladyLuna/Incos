@@ -1,0 +1,24 @@
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_server
+    environment:
+      # Define la contraseña del usuario root
+      MYSQL_ROOT_PASSWORD: luna7
+      # Crea una base de datos inicial automáticamente
+      MYSQL_DATABASE: tienda_db
+      # Crea un usuario adicional (opcional pero recomendado)
+      MYSQL_USER: willian
+      MYSQL_PASSWORD: luna7
+    ports:
+    # adentro del contenedor, MySQL escucha en el puerto 3306, 
+    # y lo mapeamos al mismo puerto en el host
+      - "3306:3306"
+    volumes: # un lugar donde persisten los datos luna7
+    # Monta un volumen para persistir los datos de MySQL
+    # , asegurando que no se pierdan al reiniciar el contenedor
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

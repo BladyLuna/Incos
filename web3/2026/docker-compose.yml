@@ -1,0 +1,6 @@
+# en compose se llama a cada microservicio y se crean los contenedores de cada uno
+# docker alphine es una imagen de docker ligera y rapida, ideal para microservicios
+# cada microservicio tiene su propio Dockerfile y se construye su imagen de docker
+# cada microservicio se ejecuta en su propio contenedor, lo que permite una mejor escalabilidad y aislamiento
+# cada microservicio se comunica con los demas a traves de la red de docker, lo que facilita la comunicacion entre ellos
+# cada microservicio puede ser actualizado o reiniciado sin afectar a los demas, lo que mejora la resiliencia del sistema
